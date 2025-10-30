@@ -3,6 +3,9 @@
 This project showcases the power and simplicity of **Swift** and **SwiftUI** through a clean and interactive movie tracking experience.  
 Users can easily manage their watchlist — adding, deleting, and even choosing random movies to watch.
 
+https://github.com/user-attachments/assets/43c5c35a-ac1b-4a24-91ca-0dfef761c674
+
+
 ---
 
 ## ✨ Features
