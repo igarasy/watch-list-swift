@@ -6,11 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		E7C3C8E92EB41C4200A70D26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7EF72A72EB0E6B10002E1D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7EF72AE2EB0E6B10002E1D3;
+			remoteInfo = WatchList;
+		};
+		E7C3C8F82EB41C8500A70D26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7EF72A72EB0E6B10002E1D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7EF72AE2EB0E6B10002E1D3;
+			remoteInfo = WatchList;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E7C3C8E52EB41C4200A70D26 /* WatchListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7C3C8F22EB41C8400A70D26 /* WatchListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EF72AF2EB0E6B10002E1D3 /* WatchList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E7C3C8E62EB41C4200A70D26 /* WatchListTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WatchListTests;
+			sourceTree = "<group>";
+		};
+		E7C3C8F32EB41C8400A70D26 /* WatchListUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WatchListUITests;
+			sourceTree = "<group>";
+		};
 		E7EF72B12EB0E6B10002E1D3 /* WatchList */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WatchList;
@@ -19,6 +48,20 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E7C3C8E22EB41C4200A70D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C3C8EF2EB41C8400A70D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7EF72AC2EB0E6B10002E1D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				E7EF72B12EB0E6B10002E1D3 /* WatchList */,
+				E7C3C8E62EB41C4200A70D26 /* WatchListTests */,
+				E7C3C8F32EB41C8400A70D26 /* WatchListUITests */,
 				E7EF72B02EB0E6B10002E1D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				E7EF72AF2EB0E6B10002E1D3 /* WatchList.app */,
+				E7C3C8E52EB41C4200A70D26 /* WatchListTests.xctest */,
+				E7C3C8F22EB41C8400A70D26 /* WatchListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +95,52 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E7C3C8E42EB41C4200A70D26 /* WatchListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C3C8ED2EB41C4200A70D26 /* Build configuration list for PBXNativeTarget "WatchListTests" */;
+			buildPhases = (
+				E7C3C8E12EB41C4200A70D26 /* Sources */,
+				E7C3C8E22EB41C4200A70D26 /* Frameworks */,
+				E7C3C8E32EB41C4200A70D26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7C3C8EA2EB41C4200A70D26 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E7C3C8E62EB41C4200A70D26 /* WatchListTests */,
+			);
+			name = WatchListTests;
+			packageProductDependencies = (
+			);
+			productName = WatchListTests;
+			productReference = E7C3C8E52EB41C4200A70D26 /* WatchListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7C3C8F12EB41C8400A70D26 /* WatchListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C3C8FA2EB41C8500A70D26 /* Build configuration list for PBXNativeTarget "WatchListUITests" */;
+			buildPhases = (
+				E7C3C8EE2EB41C8400A70D26 /* Sources */,
+				E7C3C8EF2EB41C8400A70D26 /* Frameworks */,
+				E7C3C8F02EB41C8400A70D26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7C3C8F92EB41C8500A70D26 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E7C3C8F32EB41C8400A70D26 /* WatchListUITests */,
+			);
+			name = WatchListUITests;
+			packageProductDependencies = (
+			);
+			productName = WatchListUITests;
+			productReference = E7C3C8F22EB41C8400A70D26 /* WatchListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E7EF72AE2EB0E6B10002E1D3 /* WatchList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7EF72BA2EB0E6B30002E1D3 /* Build configuration list for PBXNativeTarget "WatchList" */;
@@ -80,6 +173,14 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					E7C3C8E42EB41C4200A70D26 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = E7EF72AE2EB0E6B10002E1D3;
+					};
+					E7C3C8F12EB41C8400A70D26 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = E7EF72AE2EB0E6B10002E1D3;
+					};
 					E7EF72AE2EB0E6B10002E1D3 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -100,11 +201,27 @@
 			projectRoot = "";
 			targets = (
 				E7EF72AE2EB0E6B10002E1D3 /* WatchList */,
+				E7C3C8E42EB41C4200A70D26 /* WatchListTests */,
+				E7C3C8F12EB41C8400A70D26 /* WatchListUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E7C3C8E32EB41C4200A70D26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C3C8F02EB41C8400A70D26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7EF72AD2EB0E6B10002E1D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +232,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E7C3C8E12EB41C4200A70D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C3C8EE2EB41C8400A70D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7EF72AB2EB0E6B10002E1D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +255,119 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E7C3C8EA2EB41C4200A70D26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7EF72AE2EB0E6B10002E1D3 /* WatchList */;
+			targetProxy = E7C3C8E92EB41C4200A70D26 /* PBXContainerItemProxy */;
+		};
+		E7C3C8F92EB41C8500A70D26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7EF72AE2EB0E6B10002E1D3 /* WatchList */;
+			targetProxy = E7C3C8F82EB41C8500A70D26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E7C3C8EB2EB41C4200A70D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCP59LZ5L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igarashi.lucas.WatchListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WatchList";
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		E7C3C8EC2EB41C4200A70D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCP59LZ5L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igarashi.lucas.WatchListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WatchList";
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		E7C3C8FB2EB41C8500A70D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCP59LZ5L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igarashi.lucas.WatchListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = WatchList;
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		E7C3C8FC2EB41C8500A70D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCP59LZ5L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igarashi.lucas.WatchListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = WatchList;
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
 		E7EF72B82EB0E6B30002E1D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -332,6 +575,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E7C3C8ED2EB41C4200A70D26 /* Build configuration list for PBXNativeTarget "WatchListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C3C8EB2EB41C4200A70D26 /* Debug */,
+				E7C3C8EC2EB41C4200A70D26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7C3C8FA2EB41C8500A70D26 /* Build configuration list for PBXNativeTarget "WatchListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C3C8FB2EB41C8500A70D26 /* Debug */,
+				E7C3C8FC2EB41C8500A70D26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7EF72AA2EB0E6B10002E1D3 /* Build configuration list for PBXProject "WatchList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
