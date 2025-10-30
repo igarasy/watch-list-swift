@@ -87,7 +87,7 @@ struct ContentView: View {
             randomMovieGenerator()
             isShowingAlert = true
           } label: {
-            ButtonImageView(symbolName: "arrow.trianglehead.2.clockwise.rotate.90.circle.fill")
+              ButtonImageView(symbolName: "arrow.trianglehead.2.clockwise.rotate.90.circle.fill")
           }
           .alert(randomMovie, isPresented: $isShowingAlert) {
             Button("OK", role: .cancel) {}
