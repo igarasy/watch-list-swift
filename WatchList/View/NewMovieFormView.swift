@@ -40,14 +40,15 @@ struct NewMovieFormView: View {
         TextField("Movie Title", text: $title)
           .textFieldStyle(.roundedBorder)
           .font(.largeTitle.weight(.light))
+          .accessibilityIdentifier("MovieTitleField")
         
         // MARK: - GENRE
         Picker("Genre", selection: $selectedGenre) {
-          ForEach(Genre.allCases) { genre in
-            Text(genre.name)
-              .tag(genre)
+          ForEach(Genre.allCases, id: \.self) { genre in
+            Text(genre.name).tag(genre)
           }
         }
+        .accessibilityIdentifier("GenrePicker")
         
         // MARK: - SAVE BUTTON
         Button {
@@ -68,6 +69,7 @@ struct NewMovieFormView: View {
         .controlSize(.extraLarge)
         .buttonBorderShape(.roundedRectangle)
         .disabled(title.isEmpty || title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+        .accessibilityIdentifier("SaveMovieButton")
         
         // MARK: - CANCEL BUTTON
         Button {
@@ -76,10 +78,12 @@ struct NewMovieFormView: View {
           Text("Close")
             .frame(maxWidth: .infinity)
         }
+        .accessibilityIdentifier("CancelButton")
         
       } //: LIST
       .listRowSeparator(.hidden)
     } //: FORM
+    .accessibilityIdentifier("NewMovieFormView")
   }
 }
 

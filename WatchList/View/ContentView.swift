@@ -10,20 +10,21 @@ import SwiftData
 
 struct ContentView: View {
   // MARK: - PROPERTIES
-  
+
   @Environment(\.modelContext) var modelContext
   @Query private var movies: [Movie]
-  
+
   @State private var isSheetPresented: Bool = false
   @State private var randomMovie: String = ""
   @State private var isShowingAlert: Bool = false
-  
+
   // MARK: - FUNCTIONS
-  
+
   private func randomMovieGenerator() {
-    randomMovie = movies.randomElement()!.title
+    guard let picked = movies.randomElement() else { return }
+    randomMovie = picked.title
   }
-  
+
   var body: some View {
     List {
       if !movies.isEmpty {
@@ -34,7 +35,7 @@ struct ContentView: View {
                 .font(.largeTitle.weight(.black))
                 .foregroundStyle(.blue.gradient)
                 .padding()
-              
+
               HStack {
                 Label("Title", systemImage: "movieclapper")
                 Spacer()
@@ -47,19 +48,19 @@ struct ContentView: View {
               Text(movie.title)
                 .font(.title.weight(.light))
                 .padding(.vertical, 2)
-              
+
               Spacer()
-              
+
               Text(movie.genre.name)
                 .font(.footnote.weight(.medium))
                 .padding(.horizontal, 6)
                 .padding(.vertical, 3)
                 .background(
-                  Capsule()
-                    .stroke(lineWidth: 1)
+                  Capsule().stroke(lineWidth: 1)
                 )
                 .foregroundStyle(.tertiary)
-            } //: LIST ROW
+            }
+            .accessibilityIdentifier("MovieRow_\(movie.title)")
             .swipeActions {
               Button(role: .destructive) {
                 withAnimation {
@@ -68,16 +69,29 @@ struct ContentView: View {
               } label: {
                 Label("Delete", systemImage: "trash")
               }
+              .accessibilityIdentifier("SwipeDeleteButton")
             }
           }
         }
       }
-    } //: LIST
+    }
+    .accessibilityIdentifier("MoviesList")
     .overlay {
       if movies.isEmpty {
         EmptyListView()
       }
     }
+    .onAppear {
+      #if DEBUG
+      if ProcessInfo.processInfo.arguments.contains("-UI_TEST_SEED"),
+         movies.count < 2 {
+        modelContext.insert(Movie(title: "Inception",    genre: .scifi))
+        modelContext.insert(Movie(title: "Interstellar", genre: .scifi))
+        try? modelContext.save()
+      }
+      #endif
+    }
+
     // MARK: - SAFE AREA
     .safeAreaInset(edge: .bottom, alignment: .center) {
       HStack {
@@ -87,17 +101,18 @@ struct ContentView: View {
             randomMovieGenerator()
             isShowingAlert = true
           } label: {
-              ButtonImageView(symbolName: "arrow.trianglehead.2.clockwise.rotate.90.circle.fill")
+            ButtonImageView(symbolName: "arrow.trianglehead.2.clockwise.rotate.90.circle.fill")
           }
           .alert(randomMovie, isPresented: $isShowingAlert) {
             Button("OK", role: .cancel) {}
           }
           .accessibilityLabel("Random Movie")
+          .accessibilityIdentifier("RandomMovieButton")
           .sensoryFeedback(.success, trigger: isShowingAlert)
-          
+
           Spacer()
         }
-        
+
         // NEW MOVIE BUTTON
         Button {
           isSheetPresented.toggle()
@@ -105,13 +120,15 @@ struct ContentView: View {
           ButtonImageView(symbolName: "plus.circle.fill")
         }
         .accessibilityLabel("New Movie")
+        .accessibilityIdentifier("NewMovieButton")
         .sensoryFeedback(.success, trigger: isSheetPresented)
       }
       .padding(.horizontal)
-    } //: SAFE AREA
+    }
     // MARK: - SHEET
     .sheet(isPresented: $isSheetPresented) {
       NewMovieFormView()
+        .accessibilityIdentifier("NewMovieFormView")
     }
   }
 }
